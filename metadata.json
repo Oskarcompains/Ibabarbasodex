@@ -1,0 +1,10 @@
+{
+  "name": "Remix IBARDEX - CD Soto Ibarbaso",
+  "description": "Colección digital oficial de cartas y álbum de cromos para aficionados del Club Deportivo Soto Ibarbaso con apertura de sobres, escaneo QR y ranking de coleccionistas.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

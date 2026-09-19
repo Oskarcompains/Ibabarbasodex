@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile, collection progress, squad and manager stats for CD Soto Ibarbaso",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Firebase Auth UID of the user" },
+        "email": { "type": "string", "description": "User email" },
+        "name": { "type": "string", "description": "Display name" },
+        "instagram": { "type": "string", "description": "Instagram handle" },
+        "xp": { "type": "number", "description": "Total XP earned" },
+        "level": { "type": "number", "description": "Fan level" },
+        "avatarSprite": { "type": "string", "description": "Selected retro pixel avatar" },
+        "photoURL": { "type": "string", "description": "Google profile photo URL" },
+        "role": { "type": "string", "description": "User role: admin or user" },
+        "unlockedEntries": { "type": "array", "description": "IDs of unlocked Ibardex players and items" },
+        "earnedBadges": { "type": "array", "description": "IDs of earned match badges" },
+        "unlockedGyms": { "type": "array", "description": "IDs of matches attended" },
+        "playerPacks": { "type": "number", "description": "Count of available player card packs" },
+        "managerCoins": { "type": "number", "description": "Manager coins for packs and training" },
+        "managerSquad": { "type": "object", "description": "Current manager squad and lineup" },
+        "tactics": { "type": "object", "description": "Tactical sliders and manager setup" },
+        "facilities": { "type": "object", "description": "Upgraded club facilities" },
+        "playerTraining": { "type": "object", "description": "Player stat boosts" },
+        "seasonState": { "type": "object", "description": "Season simulation progress" },
+        "cifrasLetrasStats": { "type": "object", "description": "Stats in Cifras y Letras minigame" },
+        "attendedMatches": { "type": "array", "description": "History of match check-ins" },
+        "isClubMember": { "type": "boolean", "description": "Club member status" },
+        "memberNumber": { "type": "string", "description": "Club member ID" },
+        "isLoggedInWithGoogle": { "type": "boolean", "description": "Authentication status" },
+        "updatedAt": { "type": "string", "description": "Last updated ISO date" }
+      },
+      "required": ["id", "name"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Collection of fan and manager profiles keyed by user Auth UID"
+    },
+    "/test/{testId}": {
+      "schema": "UserProfile",
+      "description": "Connection test collection"
+    }
+  }
+}

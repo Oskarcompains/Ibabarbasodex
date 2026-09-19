@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.font-silkscreen {
+  font-family: 'Silkscreen', monospace;
+}
+
+.font-tech {
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+/* Vibrant Palette - Tactile Retro Pixel Box Shadows & Borders */
+.pixel-box {
+  box-shadow: 
+    0 -3px 0 0 #000000,
+    0 3px 0 0 #000000,
+    -3px 0 0 0 #000000,
+    3px 0 0 0 #000000;
+}
+
+.pixel-box-red {
+  box-shadow: 
+    0 -3px 0 0 #d32f2f,
+    0 3px 0 0 #d32f2f,
+    -3px 0 0 0 #d32f2f,
+    3px 0 0 0 #d32f2f;
+}
+
+.pixel-box-gold {
+  box-shadow: 
+    0 -3px 0 0 #eab308,
+    0 3px 0 0 #eab308,
+    -3px 0 0 0 #eab308,
+    3px 0 0 0 #eab308;
+}
+
+/* Vibrant Palette Hard Offset Shadows */
+.shadow-retro-black {
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.shadow-retro-red {
+  box-shadow: 4px 4px 0px 0px #8b0000;
+}
+
+.shadow-retro-yellow {
+  box-shadow: 4px 4px 0px 0px #ca8a04;
+}
+
+.shadow-retro-green {
+  box-shadow: 4px 4px 0px 0px #15803d;
+}
+
+.shadow-retro-blue {
+  box-shadow: 4px 4px 0px 0px #1d4ed8;
+}
+
+/* Vibrant Tactile Buttons */
+.pixel-button {
+  position: relative;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  box-shadow: 0 4px 0 0 #000000;
+}
+
+.pixel-button:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 0 #000000;
+}
+
+.pixel-button-red {
+  box-shadow: 0 4px 0 0 #7f1d1d;
+}
+.pixel-button-red:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 0 #7f1d1d;
+}
+
+.pixel-button-yellow {
+  box-shadow: 0 4px 0 0 #854d0e;
+}
+.pixel-button-yellow:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 0 #854d0e;
+}
+
+.pixel-button-blue {
+  box-shadow: 0 4px 0 0 #1e3a8a;
+}
+.pixel-button-blue:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 0 #1e3a8a;
+}
+
+/* Subtle CRT Scanline overlay */
+.crt-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.3) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(220, 38, 38, 0.04),
+    rgba(0, 255, 100, 0.02),
+    rgba(0, 100, 255, 0.04)
+  );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Custom retro scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #18181b;
+}
+::-webkit-scrollbar-thumb {
+  background: #dc2626;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ef4444;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px rgba(220, 38, 38, 0.6)); }
+  50% { opacity: 0.85; filter: drop-shadow(0 0 12px rgba(220, 38, 38, 0.9)); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+
